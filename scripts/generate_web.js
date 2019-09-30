@@ -41,7 +41,7 @@ renderer.link = function (href, title, text) {
 let cwd = path.resolve(__dirname, '..')
 const commitMessage = exec('git log -1 --pretty=%B', { cwd }).toString('utf8')
 exec('rm -rf web', { cwd })
-exec('git clone git@github.com:interledger/rfcs.git --branch gh-pages --single-branch web', { cwd })
+exec('git clone git@github.com:jakeatdocforce/rfcs.git --branch gh-pages --single-branch web', { cwd })
 exec('cp -r ????-* web', { cwd })
 exec('cp -r shared web', { cwd })
 
